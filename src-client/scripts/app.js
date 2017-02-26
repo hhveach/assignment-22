@@ -4,6 +4,7 @@ import {MegsModels, MegsCollections} from './models.js';
 import HomeView from './homeView.js';
 import ListingView from './listingView.js';
 import CreateListingView from './newListingView.js';
+import EditView from './editView.js';
 
 const AppRouter = Backbone.Router.extend({
   initialize: function(){
@@ -12,10 +13,15 @@ const AppRouter = Backbone.Router.extend({
   },
 
   routes: {
+    'item/:id/edit' : 'editListing',
     'item/:id' : 'singleListing',
     'new' : 'createNewListing',
     ''  : 'homePage',
   },
+
+  editListing: function(id){
+
+  }.
 
   singleListing: function(id){
     // let current = window.location.hash.slice(6);`${current}`

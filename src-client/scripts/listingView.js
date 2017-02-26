@@ -23,6 +23,15 @@ const ListingView = Backbone.View.extend({
   },
 
   listingHtml: function(model){
+    // let sale = ``;
+    // console.log(sale)
+    // if(`${model.get('forSale')}` === 1){
+    //   sale = `Yes`;
+    // }
+    // if(`${model.get('forSale')}` === 0){
+    //   sale = `No`;
+    // }
+    // <h3>For Sale: ${sale}</h3>
     let finalStr = `<div class="nav-bar">
                       <h1>Hank's List</h1>
                       <span class="home">Home</span>
