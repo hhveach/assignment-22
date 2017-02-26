@@ -1,15 +1,66 @@
-*{
-	box-sizing: border-box;
+*{box-sizing: border-box;}
+
+body{}
+
+img {
+	width: 100%;
+	display: block;
+	height: auto;
 }
 
-body{
-	background: limegreen;
+.column-container {
+	width: 80%;
+	margin: 0 auto;
 }
 
-$txt-color: #333;
+.nav-bar {width: 100%;}
 
-h2{
-	color: $txt-color;
-	border-bottom: 4px solid $txt-color;
+.home {
+	font-size: 16px;
+	color: black;
 }
 
+.single-view-img {
+	width: 55%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.single-view-description {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.delete span {
+	margin-left: 5px;
+}
+
+.delete{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.home:hover, .new-edit:hover {
+	cursor: pointer;
+	background-color: #ddd;
+}
+
+.single-list-view {
+	width: 100%;
+}
+
+.home-list:hover {
+	background-color: #ddd;
+	cursor: pointer;
+}
+
+.input-msg {
+	font-size: 10px;
+}
+
+.red {
+	color: red;
+}
+
+.green {color: green;}
