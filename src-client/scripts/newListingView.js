@@ -9,6 +9,7 @@ const CreateListingView = Backbone.View.extend({
     'submit .form' : 'validateSubmit',
     'click .home' : 'homeClick',
     'click .new-edit' : 'editClick',
+    'click .reset-button' : 'resetClick',
 
   },
 
@@ -108,6 +109,20 @@ const CreateListingView = Backbone.View.extend({
         message.classList.add('green');
   },
 
+  resetClick: function(evt){
+    evt.preventDefault();
+    let inputsSelect = document.querySelectorAll('.form input');
+    let newArr = [...inputsSelect];
+      newArr.forEach(function(listEl){
+        if(listEl.type === 'checkbox'){
+          listEl.checked = false;
+        }
+        else {
+          listEl.value = '';
+        }
+      });
+  },
+
   validateSubmit: function(evt){
     evt.preventDefault();
     let target = evt.target;
@@ -152,43 +167,44 @@ const CreateListingView = Backbone.View.extend({
     let finalStr = `<div class="nav-bar">
                       <h1>Hank's List</h1>
                       <span class="home">Home</span>
-                      <span class="new-edit">Add New Listing</span>
+                      <span class="new-edit"><i class="fa fa-plus" aria-hidden="true"></i>Listing</span>
                       </div>
-                    <div class="column-container">`;
+                    <div class="column-container">
+                    <h1>Create A New Listing</h1>`;
 
     let homeStr =  `<form class="form">
 
-              <div class="item-new">
+              <div class="item-new listing-new-view">
                 <label>Item Name</label>
                 <input type="text" name="item"/>
                 <p class="input-msg"></p>
               </div>
 
-              <div class="price-new">
+              <div class="price-new listing-new-view">
                 <label>Price</label>
                 <input type="text" name="price"/>
                 <p class="input-msg"></p>
               </div>
 
-              <div class="forSale-new">
+              <div class="forSale-new listing-new-view">
                 <label>For Sale</label>
                 <input type="checkbox" name="sale"/>
                 <p class="input-msg"></p>
               </div>
 
-              <div class="description-new">
+              <div class="description-new listing-new-view">
                 <label>Description</label>
                 <input type="text" name="description"/>
                 <p class="input-msg"></p>
               </div>
 
-              <div class="imgLink-new">
+              <div class="imgLink-new listing-new-view">
                 <label>Image Link</label>
                 <input name="image"/>
                 <p class="input-msg"></p>
               </div>
 
-              <div class="category-new">
+              <div class="category-new listing-new-view">
                 <label>Category (optional)</label>
                 <input type="text" name="category"/>
                 <p class="input-msg"></p>

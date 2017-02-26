@@ -28,14 +28,14 @@ const HomeView = Backbone.View.extend({
     let finalStr = `<div class="nav-bar">
                       <h1>Hank's List</h1>
                       <span class="home">Home</span>
-                      <span class="new-edit">Add New Listing</span>
+                      <span class="new-edit"><i class="fa fa-plus" aria-hidden="true"></i>Listing</span>
                       </div>
                     <div class="column-container">`;
     let items = modelsList.map(function(listEl){
       return `<div class="home-view">
               <ul>
-              <li class="home-list" data-id="${listEl.get('_id')}"><h1>${listEl.get('item')}</h1><p>$${listEl.get('price')}</p></li>
-              <hr/>
+              <li class="home-list" data-id="${listEl.get('_id')}"><h1>${listEl.get('item')}<span class="big-price">$${listEl.get('price')}</span></h1></li>
+              
               </ul>
               </div>`;
             }).join('');

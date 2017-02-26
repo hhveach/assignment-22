@@ -1,6 +1,6 @@
 *{box-sizing: border-box;}
 
-body{}
+body{font-family: 'Palatino';}
 
 img {
 	width: 100%;
@@ -11,34 +11,66 @@ img {
 .column-container {
 	width: 80%;
 	margin: 0 auto;
+	text-align: center;
+	padding-top: 56px;
 }
 
-.nav-bar {width: 100%;}
+.nav-bar {
+	width: 100%;
+	border-bottom: 1px solid black;
+}
 
-.home {
-	font-size: 16px;
+.nav-bar h1 {
+	margin: 0 auto;
+	width: 45%;
+	text-align: center;
+}
+
+.nav-bar span {
+	font-size: 18px;
 	color: black;
+	padding: 5px 5px 0 5px;
+}
+
+.home-view {
+	text-align: left;
+	width: 80%;
+}
+
+.home-list {
+	position: relative;
+	border-bottom: 1px solid black;
+}
+
+.home-list h1 {color: #7BAFD4;}
+
+.big-price {
+	position: absolute;
+	right: 0;
 }
 
 .single-view-img {
 	width: 55%;
 	display: inline-block;
 	vertical-align: top;
+	text-align: left;
 }
 
 .single-view-description {
 	width: 40%;
 	display: inline-block;
 	vertical-align: top;
+	text-align: left;
 }
 
 .delete span {
-	margin-left: 5px;
+	margin-left: 10px;
 }
 
 .delete{
 	width: 50%;
 	margin: 0 auto;
+	font-size: 12px;
 }
 
 .home:hover, .new-edit:hover {
@@ -46,21 +78,31 @@ img {
 	background-color: #ddd;
 }
 
-.single-list-view {
-	width: 100%;
-}
+.single-list-view {width: 100%;}
 
 .home-list:hover {
 	background-color: #ddd;
 	cursor: pointer;
 }
 
-.input-msg {
-	font-size: 10px;
+.form button {
+	padding: 10px;
+	background-color: #7BAFD4;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.input-msg {font-size: 10px;}
+
+.listing-new-view {
+	text-align: left;
+	width: 55%;
+	font-size: 26px;
 }
 
-.red {
-	color: red;
+.listing-new-view input {
+	padding: 8px;
 }
+
+.red {color: red;}
 
 .green {color: green;}
