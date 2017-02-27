@@ -40,6 +40,7 @@ img {
 .home-list {
 	position: relative;
 	border-bottom: 1px solid black;
+	padding-top: 8px;
 }
 
 .home-list h1 {color: #7BAFD4;}
@@ -63,15 +64,17 @@ img {
 	text-align: left;
 }
 
-.delete span {
-	margin-left: 10px;
-}
+.description-new input {padding: 25px;}
+
+.delete span {margin-left: 10px;}
 
 .delete{
 	width: 50%;
 	margin: 0 auto;
 	font-size: 12px;
 }
+
+.delete:hover {cursor: pointer;}
 
 .home:hover, .new-edit:hover {
 	cursor: pointer;
@@ -91,6 +94,7 @@ img {
 	border: 1px solid black;
 	border-radius: 5px;
 }
+
 .input-msg {font-size: 10px;}
 
 .listing-new-view {
@@ -99,9 +103,7 @@ img {
 	font-size: 26px;
 }
 
-.listing-new-view input {
-	padding: 8px;
-}
+.listing-new-view input {padding: 8px;}
 
 .red {color: red;}
 

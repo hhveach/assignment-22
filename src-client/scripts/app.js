@@ -9,7 +9,6 @@ import EditView from './editView.js';
 const AppRouter = Backbone.Router.extend({
   initialize: function(){
     Backbone.history.start();
-    console.log('wired');
   },
 
   routes: {
@@ -19,9 +18,9 @@ const AppRouter = Backbone.Router.extend({
     ''  : 'homePage',
   },
 
-  editListing: function(id){
-
-  }.
+  // editListing: function(id){
+  //
+  // }.
 
   singleListing: function(id){
     // let current = window.location.hash.slice(6);`${current}`

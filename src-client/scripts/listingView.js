@@ -23,15 +23,17 @@ const ListingView = Backbone.View.extend({
   },
 
   listingHtml: function(model){
-    // let sale = ``;
-    // console.log(sale)
-    // if(`${model.get('forSale')}` === 1){
-    //   sale = `Yes`;
-    // }
-    // if(`${model.get('forSale')}` === 0){
-    //   sale = `No`;
-    // }
-    // <h3>For Sale: ${sale}</h3>
+    let sale = model.get('forSale');
+    let find = function(sale){
+      if(sale === 1){
+        return 'Yes';
+      }
+      else if (sale === 0){
+        return 'No';
+      }
+    }
+    let final = find(sale);
+
     let finalStr = `<div class="nav-bar">
                       <h1>Hank's List</h1>
                       <span class="home">Home</span>
@@ -45,6 +47,7 @@ const ListingView = Backbone.View.extend({
                     <div class="single-view-description" data-id="${model.get('_id')}">
                       <h1>${model.get('item')}</h1>
                       <h3>$${model.get('price')}</h3>
+                      <h3>For Sale: ${final}</h3>
                       <p>${model.get('description')}</p>
                     </div>
                     <div class="delete">
