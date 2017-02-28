@@ -18,12 +18,7 @@ const AppRouter = Backbone.Router.extend({
     ''  : 'homePage',
   },
 
-  // editListing: function(id){
-  //
-  // }.
-
   singleListing: function(id){
-    // let current = window.location.hash.slice(6);`${current}`
     let single = new MegsModels(id);
     single.fetch().then(function(){
       let view = new ListingView();

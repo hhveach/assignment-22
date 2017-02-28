@@ -37,7 +37,7 @@ const ListingView = Backbone.View.extend({
     let finalStr = `<div class="nav-bar">
                       <h1>Hank's List</h1>
                       <span class="home">Home</span>
-                      <span class="new-edit"><i class="fa fa-plus" aria-hidden="true"></i>Listing</span>
+                      <span class="new-edit"><i class="fa fa-plus" aria-hidden="true"></i> Listing</span>
                       </div>
                     <div class="column-container">
 
