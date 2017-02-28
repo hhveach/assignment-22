@@ -11,10 +11,16 @@ img {
   height: auto; }
 
 .column-container {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+  display: block;
   text-align: center;
   padding-top: 56px; }
+
+.column-container h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #7BAFD4; }
 
 .nav-bar {
   width: 100%;
@@ -36,7 +42,7 @@ img {
 
 .home-view {
   text-align: left;
-  width: 80%; }
+  width: 100%; }
 
 .home-list {
   position: relative;
